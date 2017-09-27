@@ -14,7 +14,7 @@
   }
 
   /*for the menu*/
-  ul.category{width:10%; height:700px; float:left; overflow:auto }
+  ul.category{width:10%; height:850px; float:left; overflow:auto }
 
   /*for the main image*/
   p.producthead{font-weight: bold; text-decoration: underline;}
