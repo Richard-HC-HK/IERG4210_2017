@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="adc.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <h3 class:"title"> Product Page--AD Carry <h3>
+  </header>
+
+  <nav>
+    <ul  class="category">
+      <h3> MENU </h3>
+      <li><a href="adc.html"> AD Carry </a> </li>
+      <li><a href="tank.html"> Tank </a> </li>
+    </ul>
+  </nav>
+
+  <div class="shoppingcart">
+    <ul class="shoplist">
+      <li> shoppinglist </li>
+      <li class="ho">
+          Ashe : <input type="text" id="item1" value="0" class="resizedTextbox"> @$450
+      </li>
+      <br>
+      <li class="ho">
+          Caitlyn : <input type="text" id="item2" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Draven  : <input type="text" id="item3" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Tristana: <input type="text" id="item4" value="0" class="resizedTextbox"> @$1350
+      </li>
+      <br>
+      <li class="ho">
+          Varus   : <input type="text" id="item5" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho">
+          Vayne   : <input type="text" id="item6" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho"> Total Sum = 450 </li>
+      <br>
+      <li class="ho"> <button type="button">Checkout</button> </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="producthead"> <a href="../phase1.html">Home </a><a href="adc.html">-->Category </a></h3>
+    <ul class="table">
+      <li><a href="../page--product/ashe.html"><img class="autoResizeImage" src="../images/adc/Ashe.jpg"></a>
+          <a href="../page--product/ashe.html">Ashe</a> $450 <br>
+          <button onclick="asheFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/caitlyn.html"><img class="autoResizeImage" src="../images/adc/Caitlyn.jpg"></a>
+          <a href="../page--product/caitlyn.html">Caitlyn</a> $6300 <br>
+          <button onclick="caitlynFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/draven.html"><img class="autoResizeImage" src="../images/adc/Draven.jpg"></a>
+          <a href="../page--product/draven.html">Draven</a> $6300 <br>
+          <button onclick="dravenFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/tristana.html"><img class="autoResizeImage" src="../images/adc/Tristana.jpg"></a>
+          <a href="../page--product/tristana.html">Tristana</a> $1350 <br>
+          <button onclick="tristanaFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/varus.html"><img class="autoResizeImage" src="../images/adc/Varus.jpg"></a>
+          <a href="../page--product/varus.html"> Varus</a> $4800 <br>
+          <button onclick="varusFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/vayne.html"><img class="autoResizeImage" src="../images/adc/Vayne.jpg"></a>
+          <a href="../page--product/vayne.html"> Vayne</a> $4800 <br>
+          <button onclick="vayneFunction()" type="button">addtoCart!</button>
+      </li>
+    </ul>
+    <p class="clear"> Total Choices: 6</p>
+    <a href="../phase1.html"> Click here to go back!</a>
+  </div>
+
+  <footer>Copyright &copy; Huang Cen (1155062136)</footer>
+
+  <script src="adc.js" type="text/javascript"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="tank.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <h3 class:"title"> Product Page--Tank <h3>
+  </header>
+
+  <nav>
+    <ul  class="category">
+      <h3> MENU </h3>
+      <li><a href="tank.html"> AD Carry </a> </li>
+      <li><a href="tank.html"> Tank </a> </li>
+    </ul>
+  </nav>
+
+  <div class="shoppingcart">
+    <ul class="shoplist">
+      <li> shoppinglist </li>
+      <li class="ho">
+          Alistar : <input type="text" id="item1" value="0" class="resizedTextbox"> @$1350
+      </li>
+      <br>
+      <li class="ho">
+          Darius : <input type="text" id="item2" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Garen  : <input type="text" id="item3" value="0" class="resizedTextbox"> @$3150
+      </li>
+      <br>
+      <li class="ho">
+          Malphite: <input type="text" id="item4" value="0" class="resizedTextbox"> @$1350
+      </li>
+      <br>
+      <li class="ho">
+          Nautilus   : <input type="text" id="item5" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho">
+          Renekton   : <input type="text" id="item6" value="0" class="resizedTextbox"> @$3150
+      </li>
+      <br>
+      <li class="ho"> Total Sum = 1350 </li>
+      <br>
+      <li class="ho"> <button type="button">Checkout</button> </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="producthead"> <a href="../phase1.html">Home </a><a href="tank.html">-->Category </a></h3>
+    <ul class="table">
+      <li><a href="../page--product/alistar.html"><img class="autoResizeImage" src="../images/tank/Alistar.jpg"></a>
+          <a href="../page--product/alistar.html">Alistar</a> $1350 <br>
+          <button onclick="alistarFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/darius.html"><img class="autoResizeImage" src="../images/tank/Darius.jpg"></a>
+          <a href="../page--product/darius.html">Darius</a> $6300 <br>
+          <button onclick="dariusFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/garen.html"><img class="autoResizeImage" src="../images/tank/Garen.jpg"></a>
+          <a href="../page--product/garen.html">Garen</a> $3150 <br>
+          <button onclick="garenFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/malphite.html"><img class="autoResizeImage" src="../images/tank/Malphite.jpg"></a>
+          <a href="../page--product/malphite.html">Malphite</a> $1350 <br>
+          <button onclick="malphiteFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/nautilus.html"><img class="autoResizeImage" src="../images/tank/Nautilus.jpg"></a>
+          <a href="../page--product/nautilus.html"> Nautilus</a> $4800 <br>
+          <button onclick="nautilusFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page--product/renekton.html"><img class="autoResizeImage" src="../images/tank/Renekton.jpg"></a>
+          <a href="../page--product/renekton.html"> Renekton</a> $3150 <br>
+          <button onclick="renektonFunction()" type="button">addtoCart!</button>
+      </li>
+    </ul>
+    <p class="clear"> Total Choices: 6</p>
+    <a href="../phase1.html"> Click here to go back!</a>
+  </div>
+
+  <footer>Copyright &copy; Huang Cen (1155062136)</footer>
+
+  <script src="tank.js" type="text/javascript"></script>
+</div>
+</body>
+</html>
