@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="catid-2.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <h3 class:"title"> Product Page--Tank <h3>
+  </header>
+
+  <nav>
+    <h3> MENU </h3>
+    <ul  id="category">
+    </ul>
+  </nav>
+
+  <div class="shoppingcart">
+    <ul class="shoplist">
+      <li> shoppinglist </li>
+      <li class="ho">
+          Alistar : <input type="text" id="item1" value="0" class="resizedTextbox"> @$1350
+      </li>
+      <br>
+      <li class="ho">
+          Darius : <input type="text" id="item2" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Garen  : <input type="text" id="item3" value="0" class="resizedTextbox"> @$3150
+      </li>
+      <br>
+      <li class="ho">
+          Malphite: <input type="text" id="item4" value="0" class="resizedTextbox"> @$1350
+      </li>
+      <br>
+      <li class="ho">
+          Nautilus   : <input type="text" id="item5" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho">
+          Renekton   : <input type="text" id="item6" value="0" class="resizedTextbox"> @$3150
+      </li>
+      <br>
+      <li class="ho"> Total Sum = 1350 </li>
+      <br>
+      <li class="ho"> <button type="button">Checkout</button> </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="producthead"> <a href="./phase1.html">Home </a><a href="catid-2.html">-->Category </a></h3>
+    <ul id="table">
+      <!-- <li><a href="../page-product/alistar.html"><img class="autoResizeImage" src="../images/tank/Alistar.jpg"></a>
+          <a href="../page-product/alistar.html">Alistar</a> $1350 <br>
+          <button onclick="alistarFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/darius.html"><img class="autoResizeImage" src="../images/tank/Darius.jpg"></a>
+          <a href="../page-product/darius.html">Darius</a> $6300 <br>
+          <button onclick="dariusFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/garen.html"><img class="autoResizeImage" src="../images/tank/Garen.jpg"></a>
+          <a href="../page-product/garen.html">Garen</a> $3150 <br>
+          <button onclick="garenFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/malphite.html"><img class="autoResizeImage" src="../images/tank/Malphite.jpg"></a>
+          <a href="../page-product/malphite.html">Malphite</a> $1350 <br>
+          <button onclick="malphiteFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/nautilus.html"><img class="autoResizeImage" src="../images/tank/Nautilus.jpg"></a>
+          <a href="../page-product/nautilus.html"> Nautilus</a> $4800 <br>
+          <button onclick="nautilusFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/renekton.html"><img class="autoResizeImage" src="../images/tank/Renekton.jpg"></a>
+          <a href="../page-product/renekton.html"> Renekton</a> $3150 <br>
+          <button onclick="renektonFunction()" type="button">addtoCart!</button>
+      </li> -->
+    </ul>
+    <p class="clear"> Total Choices: 6</p>
+    <a href="./phase1.html"> Click here to go back!</a>
+  </div>
+
+
+  <script type="text/javascript" src="incl/myLib.js"></script>
+  <script type="text/javascript">
+  (function(){
+
+    function updateUI() {
+      myLib.get({action:'cat_fetchall'}, function(json){
+        // loop over the server response json
+        //   the expected format (as shown in Firebug):
+        for (var listItems = [],
+            i = 0, cat; cat = json[i]; i++) {
+          listItems.push('<li id="cat' , parseInt(cat.catid) , '">' ,'<a href="catid-',parseInt(cat.catid),'.html" >',cat.name.escapeHTML() , '</a></li>');
+        }
+        el('category').innerHTML = listItems.join('');
+      });
+    }
+    updateUI();
+
+  })();
+
+
+  (function(){
+
+    function updateProdUI() {
+      myLib.get({action:'prod_fetchcat2'}, function(json){
+        // loop over the server response json
+        //   the expected format (as shown in Firebug):
+        for (var listItems = [],
+            i = 0, prod; prod = json[i]; i++) {
+        listItems.push('<li id="prod' , parseInt(prod.pid) , '">' ,'<a href="pid-',parseInt(prod.pid),'.html">', '<img class="autoResizeImage" src="incl/img/', parseInt(prod.pid), '.jpg"/>', '<p class="center">',prod.name.escapeHTML() , ' - $', prod.price.escapeHTML(),'</p></a></li>');
+        }
+        el('table').innerHTML = listItems.join('');
+      });
+    }
+    updateProdUI();
+
+  })();
+
+  </script>
+
+</div>
+</body>
+</html>

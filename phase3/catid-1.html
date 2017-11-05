@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="catid-1.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <h3 class:"title"> Product Page--AD Carry <h3>
+  </header>
+
+  <nav>
+    <h3> MENU </h3>
+    <ul  id="category">
+    </ul>
+  </nav>
+
+  <div class="shoppingcart">
+    <ul class="shoplist">
+      <li> shoppinglist </li>
+      <li class="ho">
+          Ashe : <input type="text" id="item1" value="0" class="resizedTextbox"> @$450
+      </li>
+      <br>
+      <li class="ho">
+          Caitlyn : <input type="text" id="item2" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Draven  : <input type="text" id="item3" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Tristana: <input type="text" id="item4" value="0" class="resizedTextbox"> @$1350
+      </li>
+      <br>
+      <li class="ho">
+          Varus   : <input type="text" id="item5" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho">
+          Vayne   : <input type="text" id="item6" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho"> Total Sum = 450 </li>
+      <br>
+      <li class="ho"> <button type="button">Checkout</button> </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="producthead"> <a href="./phase1.html">Home </a><a href="catid-1.html">-->Category </a></h3>
+    <ul id="table">
+      <!-- <li><a href="../page-product/ashe.html"><img class="autoResizeImage" src="../images/adc/Ashe.jpg"></a>
+          <a href="../page-product/ashe.html">Ashe</a> $450 <br>
+          <button onclick="asheFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/caitlyn.html"><img class="autoResizeImage" src="../images/adc/Caitlyn.jpg"></a>
+          <a href="../page-product/caitlyn.html">Caitlyn</a> $6300 <br>
+          <button onclick="caitlynFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/draven.html"><img class="autoResizeImage" src="../images/adc/Draven.jpg"></a>
+          <a href="../page-product/draven.html">Draven</a> $6300 <br>
+          <button onclick="dravenFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/tristana.html"><img class="autoResizeImage" src="../images/adc/Tristana.jpg"></a>
+          <a href="../page-product/tristana.html">Tristana</a> $1350 <br>
+          <button onclick="tristanaFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/varus.html"><img class="autoResizeImage" src="../images/adc/Varus.jpg"></a>
+          <a href="../page-product/varus.html"> Varus</a> $4800 <br>
+          <button onclick="varusFunction()" type="button">addtoCart!</button>
+      </li>
+      <li><a href="../page-product/vayne.html"><img class="autoResizeImage" src="../images/adc/Vayne.jpg"></a>
+          <a href="../page-product/vayne.html"> Vayne</a> $4800 <br>
+          <button onclick="vayneFunction()" type="button">addtoCart!</button>
+      </li> -->
+    </ul>
+    <p class="clear"> Total Choices: 6</p>
+    <a href="./phase1.html"> Click here to go back!</a>
+  </div>
+
+  <!-- <footer>Copyright &copy; Huang Cen (1155062136)</footer> -->
+
+  <script type="text/javascript" src="incl/myLib.js"></script>
+  <script type="text/javascript">
+  (function(){
+
+  	function updateUI() {
+  		myLib.get({action:'cat_fetchall'}, function(json){
+  			// loop over the server response json
+  			//   the expected format (as shown in Firebug):
+  			for (var listItems = [],
+  					i = 0, cat; cat = json[i]; i++) {
+  				listItems.push('<li id="cat' , parseInt(cat.catid) , '">' ,'<a href="catid-',parseInt(cat.catid),'.html" >',cat.name.escapeHTML() , '</a></li>');
+  			}
+  			el('category').innerHTML = listItems.join('');
+  		});
+  	}
+  	updateUI();
+
+  })();
+
+
+  (function(){
+
+  	function updateProdUI() {
+  		myLib.get({action:'prod_fetchcat1'}, function(json){
+  			// loop over the server response json
+  			//   the expected format (as shown in Firebug):
+  			for (var listItems = [],
+  					i = 0, prod; prod = json[i]; i++) {
+          listItems.push('<li id="prod' , parseInt(prod.pid) , '">' ,'<a href="pid-',parseInt(prod.pid),'.html">', '<img class="autoResizeImage" src="incl/img/', parseInt(prod.pid), '.jpg"/>', '<p class="center">',prod.name.escapeHTML() , ' - $', prod.price.escapeHTML(),'</p></a></li>');
+  			}
+  			el('table').innerHTML = listItems.join('');
+  		});
+  	}
+  	updateProdUI();
+
+  })();
+
+  </script>
+
+</div>
+</body>
+</html>
