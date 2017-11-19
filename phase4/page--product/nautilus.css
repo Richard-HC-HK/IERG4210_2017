@@ -1,0 +1,58 @@
+body{background-image: url("../images/background.jpg");}
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+/*for menu*/
+ul.category{width:10%; height:920px; float:left; overflow:auto }
+
+/*for product*/
+.product{
+  width:65%;
+  position: absolute;
+  top: 180px;
+  right: 330px;
+  list-style:none;
+  overflow:auto;
+}
+
+.autoResizeImage{
+  height: 80%;
+  width: 100%;
+}
+
+/*for the shopping cart*/
+.shoppingcart{
+  width: 27%;
+  float: right;
+  overflow: auto;
+}
+
+ul.shoplist{float: left}
+.resizedTextbox {width: 20px}
+
+li.ho{
+  display: none;
+  position: absolute;
+  background-color: #FAFAD2;
+  min-width: 185px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+div.shoppingcart:hover li.ho{display: block}
+
+.shophead{font-size: 1.4em; font-weight: bold; text-decoration: underline; text-shadow : 5px 10px 2px #0000ff, -3px 6px 5px #0000ff; }
+
+.introduction{text-decoration: underline;}

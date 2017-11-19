@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="phase1.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+
+  <header>
+    <h3 class:"title"> Main Page <h3>
+  </header>
+
+  <nav>
+    <h3 class="menutitle"> MENU </h3>
+    <ul  id="categoryList">
+    </ul>
+  </nav>
+
+  <div class="shoppingcart">
+    <ul class="shoplist">
+      <li> shoppinglist </li>
+      <li class="ho">
+          Ashe : <input type="text" id="item1" value="0" class="resizedTextbox"> @$450
+      </li>
+      <br>
+      <li class="ho">
+          Caitlyn : <input type="text" id="item2" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Draven  : <input type="text" id="item3" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Tristana: <input type="text" id="item4" value="0" class="resizedTextbox"> @$1350
+      </li>
+      <br>
+      <li class="ho">
+          Varus   : <input type="text" id="item5" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho">
+          Vayne   : <input type="text" id="item6" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho"> Total Sum = 450 </li>
+      <br>
+      <li class="ho"> <button type="button">Checkout</button> </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="producthead"><a href="phase1.html"> Home </a></h3>
+    <div class="table">
+      <!-- <img class="autoResizeImage" src="images/myimg.jpg"> -->
+      <p class="imgtitle"> League of Legends </p>
+    </div>
+    <p class="clear"> Two categories for you to choose!</p>
+  </div>
+
+
+  <!-- <footer>Copyright &copy; Huang Cen (1155062136)</footer> -->
+
+  <script type="text/javascript" src="incl/myLib.js"></script>
+  <script type="text/javascript">
+  (function(){
+
+  	function updateUI() {
+  		myLib.get({action:'cat_fetchall'}, function(json){
+  			// loop over the server response json
+  			//   the expected format (as shown in Firebug):
+  			for (var listItems = [],
+  					i = 0, cat; cat = json[i]; i++) {
+  				listItems.push('<li id="cat' , parseInt(cat.catid) , '">' ,'<a href="catid-',parseInt(cat.catid),'.html" >',cat.name.escapeHTML() , '</a></li>');
+  			}
+  			el('categoryList').innerHTML = listItems.join('');
+  		});
+  	}
+  	updateUI();
+
+  })();
+
+  el('categoryList').onclick = function(e) {
+
+		//alert(e.target.parentNode.id.replace(/^cat/, ''));
+		// var id = e.target.parentNode.id.replace(/^cat/, '');
+
+				myLib.post({action:'prod_redirect_cat1'}, function(json){
+
+				// loop over the server response json
+				//   the expected format (as shown in Firebug):
+				// for (var listItems = [],
+				// 		i = 0, prod; prod = json[i]; i++) {
+        //
+				// 	listItems.push('<li id="prod' , parseInt(prod.pid) , '">' , '<img src="incl/img/', parseInt(prod.pid), '.jpg"/>', '<p class="center">',prod.name.escapeHTML() , ' - $', prod.price.escapeHTML(),'</p></li>');
+				// 	}
+				// el('productList').innerHTML = listItems.join('');
+			});
+
+			// fill in the editing form with existing values
+
+		//handle the click on the category name
+	}
+
+
+  </script>
+
+</div>
+</body>
+</html>
