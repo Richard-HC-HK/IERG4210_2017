@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ashe</title>
+  <link rel="stylesheet" href="pid-1.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <h3 class:"title"> Product Page<h3>
+  </header>
+
+  <nav>
+    <ul  id="category">
+    </ul>
+  </nav>
+
+  <div class="product">
+    <h3 class="producthead"> <a href="phase1.html">Home </a><a href="catid-1.html">-->Category </a><a href="./pid-1.html">-->Product </a> </h3>
+    <a href="ashe.html"><img class="autoResizeImage" src="./images/adc/Ashe.jpg"></a>
+    <br> Ashe</a>
+    <br> $450
+    <br> <p class="introduction"> Introduction: <br>
+             With each arrow she fires from her ancient ice-enchanted bow, Ashe proves she is a master archer. <br>
+             She chooses each target carefully, waits for the right moment, and then strikes with power and precision. <br>
+             It is with this same vision and focus that she pursues her goal of uniting the tribes of the Freljord and forging them into a mighty nation.
+         </p>
+    <br> <button onclick="asheFunction()" type="button">addtoCart!</button>
+    <br>
+    <br> <a href="catid-1.html"> Click to go back!</a>
+    <br>
+  </div>
+
+  <div class="shoppingcart">
+    <ul class="shoplist">
+      <li> shoppinglist </li>
+      <li class="ho">
+          Ashe : <input type="text" id="item1" value="0" class="resizedTextbox"> @$450
+      </li>
+      <br>
+      <li class="ho">
+          Caitlyn : <input type="text" id="item2" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Draven  : <input type="text" id="item3" value="0" class="resizedTextbox"> @$6300
+      </li>
+      <br>
+      <li class="ho">
+          Tristana: <input type="text" id="item4" value="0" class="resizedTextbox"> @$1350
+      </li>
+      <br>
+      <li class="ho">
+          Varus   : <input type="text" id="item5" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho">
+          Vayne   : <input type="text" id="item6" value="0" class="resizedTextbox"> @$4800
+      </li>
+      <br>
+      <li class="ho"> Total Sum = 450 </li>
+      <br>
+      <li class="ho"> <button type="button">Checkout</button> </li>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="incl/myLib.js"></script>
+  <script type="text/javascript">
+  (function(){
+
+    function updateUI() {
+      myLib.get({action:'cat_fetchall'}, function(json){
+        // loop over the server response json
+        //   the expected format (as shown in Firebug):
+        for (var listItems = [],
+            i = 0, cat; cat = json[i]; i++) {
+          listItems.push('<li id="cat' , parseInt(cat.catid) , '">' ,'<a href="catid-',parseInt(cat.catid),'.html" >',cat.name.escapeHTML() , '</a></li>');
+        }
+        el('category').innerHTML = listItems.join('');
+      });
+    }
+    updateUI();
+
+  })();
+
+
+
+  </script>
+
+</div>
+</body>
+</html>

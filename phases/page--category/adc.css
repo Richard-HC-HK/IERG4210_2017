@@ -1,0 +1,67 @@
+body{background-image: url("../images/background.jpg");}
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+/*for the menu*/
+ul.category{width:10%; height:500px; float:left; overflow:auto }
+
+/*for the table*/
+ul.table{
+    width:65%;
+    position: absolute;
+    top: 140px;
+    right: 330px;
+    list-style:none;
+    overflow:auto
+}
+
+ul.table li{width:300px; height:250px; float:left; padding:2px; border:1px solid #CCC}
+.clear{clear:both}
+
+.autoResizeImage{
+  height: 80%;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(10, 10, 255, 0.9);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    cursor: pointer;
+}
+
+/*for the shopping cart*/
+.shoppingcart{
+  width: 35%;
+  float: right;
+  overflow: auto;
+}
+
+ul.shoplist{float: left}
+.resizedTextbox {width: 20px}
+
+li.ho{
+  display: none;
+  position: absolute;
+  background-color: #FAFAD2;
+  min-width: 165px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+div.shoppingcart:hover li.ho{display: block}
+
+.shophead{font-size: 1.4em; font-weight: bold; text-decoration: underline; text-shadow : 5px 10px 2px #0000ff, -3px 6px 5px #0000ff; }
