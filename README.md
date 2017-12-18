@@ -1,5 +1,5 @@
 IERG 4210
-Name: HUANG Cen (»Æá¯)
+Name: HUANG Cen 
 Student ID: 1155062136
 
 1.  My Website:
