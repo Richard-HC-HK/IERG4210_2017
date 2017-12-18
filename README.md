@@ -14,6 +14,7 @@ Student ID: 1155062136
      (you can view the admin panel by this account)
 
 3.  File Utilities:
+     Final version of files are in the folder phases/
      admin.php -- admin panel
      index.php -- user panel
      login.php -- login panel
